@@ -1,0 +1,38 @@
+img{
+    border: solid 1px blue;
+}
+div{
+    width:fit-content;
+}
+
+.divClass{
+    border: solid 2px red;
+}
+
+#id1{
+    border: solid 3px blue;
+}
+
+#id2{
+    background-color: skyblue;
+    width: fit-content;
+}
+
+h1{
+    background-color: springgreen;
+    width: fit-content;
+}
+
+img[src="img/abdul_kalam.jfif"]{
+    border: solid 5px yellow;
+}
+
+h1, h2 {
+    color: green;
+}
+
+
+h2 , .divClass , #id3 {
+    text-align: center;
+    color: yellowgreen;
+}
