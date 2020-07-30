@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Cols   {
+            border: solid 1px red;
+            display : flex;
+        }
+
+        .Cols > div {
+            border: solid 1px green;
+            flex : 1;
+        }
+
+        .Cols > div:nth-of-type(2) {
+            flex : 10;         
+        }
+        .Cols > div:nth-of-type(3) {
+            flex : 5;         
+        }
+        .Cols > div:nth-of-type(1) {
+            flex : 5;         
+        }
+    </style>
+</head>
+<body>
+    <div class="Cols">
+        <div>
+            Column1
+        </div>
+        <div>
+            Column2
+        </div>
+        <div>
+            Column3
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .CPrinter , .CDesktop {
+            display : none;
+        }
+
+        @media print {
+            .CMobile , .CDesktop{
+                display:none;
+            }
+            .CPrinter{
+                display:block;
+            }
+        }
+
+        @media screen and (min-width : 768px){
+            .CMobile , .CPrinter{
+                display:none;
+            }
+            .CDesktop{
+                display:block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="CMobile">Show Text in Mobile </div>
+    <div class="CDesktop">Show Text in Desktop </div>
+    <div class="CPrinter">Show Text in Printer </div>
+</body>
+</html>

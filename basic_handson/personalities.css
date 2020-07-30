@@ -36,3 +36,7 @@ h2 , .divClass , #id3 {
     text-align: center;
     color: yellowgreen;
 }
+
+.divClass > p {
+    font-size:  2.5em;
+}
