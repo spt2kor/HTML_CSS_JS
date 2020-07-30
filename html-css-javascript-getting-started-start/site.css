@@ -1,0 +1,126 @@
+* {
+    margin:0;
+}
+
+html , body {
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: grey;
+}
+
+p {
+    margin : 0.5em 0 0.5em 0;
+}
+
+header{
+    display : block;
+    position: fixed;
+    top : 0;
+    left: 0;
+    width: 100%;
+    background-color: #a493c0;
+    padding : 10px;
+}
+
+nav a:visited ,
+nav a:link{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+nav > ul{
+    display: inline;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    list-style: none;
+}
+
+
+main{
+    display: block;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+    background-image: url("images/background.png");
+}
+
+
+footer{
+    padding: 15px;
+}
+
+aside , article {
+    padding: 2em;
+}
+
+aside{
+    text-align: center;
+}
+
+article{
+    width: 75%;
+}
+
+.columns{
+    display: flex;
+}
+
+@media only screen and (min-width : 768px) {
+    main{
+        display: flex;
+    }
+    aside{
+        margin-left:2%;
+    }
+
+    .column-desktop{
+        display: flex;
+    }
+}
+
+/* Pie page specific style */
+
+.pie{
+    margin:10px;
+    padding:10px;
+    width : 200px;
+    background-color: white;
+    border: solid 1px whitesmoke;
+}
+
+.pie img{
+    width: 100%;
+}
+
+.pie .title{
+    font-weight: bold;
+}
+
+.pie .columns{
+    width: 100%;
+}
+
+.pie .price{
+    text-align: right;
+}
+
+.pie .columns div{
+    width: 50%;
+}
+
+.pie button{
+    color : white;
+    background-color: pink;
+    padding: 10px;
+    border: solid 1px pink;
+    border-radius: 3px;
+}
