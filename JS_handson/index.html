@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Testing JS 
+    <script>
+
+        let days = ["Friday","Saturday","Sunday","Monday"];
+        days.forEach( function(val , ind ) {
+            console.log(` days[ ${ind} ] => ${ val}`);
+        });
+        let arr = [10,20,30,40,50];
+
+        console.log(arr);
+
+        
+
+        function sum(x , y){
+            return x+y;
+        }
+        console.log(sum(100000000000000000 , 22222222222222));
+
+        /*object litrel */
+        let person = {
+            firstName : "Shailendra",
+            lastName : "Rajput",
+            fullName : function() {
+                console.log(this.firstName + " " + this.lastName);
+            },
+            marks : [],
+            addMarks : function(_marks){
+                this.marks = _marks;
+                this.calGrade();
+            },
+            result: {
+                totalMark : 0,
+                avgMark: 0.0,
+                grade: "P" ,
+            },
+            calGrade: function(){
+                this.result.totalMark = 0;
+                for(let i =0 ; i< this.marks.length ; ++i){
+                    this.result.totalMark += this.marks[i];
+                }
+                let avg = this.result.avgMark = this.result.totalMark/this.marks.length;
+                if(avg > 40&& avg < 60)
+                    this.result.grade = "Pass";
+                else if( 60 < avg && avg < 80 )
+                    this.result.grade = "First";
+                else if(80 < avg)
+                    this.result.grade = "Excellent";
+                else
+                    this.result.grade = "Fail";
+                
+            },
+            showResult : function(){
+                console.log("grade " + this.result.grade);
+                console.log("avg : " + this.result.avgMark);
+
+            }
+        };
+
+        person.fullName();
+        console.log(person);
+        let mark1 = [70,90,80,100,100];
+        person.addMarks (mark1);
+        person.showResult();
+        mark1 = [7,9,8,10,10];
+        person.addMarks (mark1);
+        person.showResult();
+
+    </script>
+</body>
+</html>

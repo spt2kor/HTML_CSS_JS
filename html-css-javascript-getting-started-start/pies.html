@@ -30,7 +30,7 @@
                         <div class="title"> Apple Pie </div>
                         <div class="price"> $12.95</div>
                     </div>
-                    <p>our Famous Apple Pie</p>
+                    <p class="desc">our Famous Apple Pie</p>
                     <button data-order="applie-pie">Order</button>
                </div>
                <div class="pie">
@@ -39,7 +39,7 @@
                         <div class="title"> Cherry Pie </div>
                         <div class="price"> $14.95</div>
                     </div>
-                    <p>our Famous Cherry  Pie</p>
+                    <p class="desc">our Famous Cherry  Pie</p>
                     <button data-order="cherry-pie">Order</button>
                </div>
            </section>
@@ -55,4 +55,26 @@
         </nav>
     </footer>
 </body>
+<script>
+    window.addEventListener("DOMContentLoaded" , function(e){
+        const buttons = document.querySelectorAll("button[data-order]");
+        buttons.forEach(function(button){
+            button.addEventListener("click" , function(e){
+                const button = e.currentTarget;
+                const container = button.parentNode;
+
+                const order = {
+                    id : button.getAttribute("data-order"),
+                    title : container.querySelector(".title").innerText,
+                    price : container.querySelector(".price").innerText,
+                    desc : container.querySelector(".desc").innerText
+                };
+                localStorage.setItem("order" , JSON.stringify(order));
+
+                const url = window.location.href.replace("pies.html" , "order.html");
+                window.location.href = url;
+            });
+        });
+    });
+</script>
 </html>

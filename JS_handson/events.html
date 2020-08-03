@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    page loaded.
+    <button id="clickMe">ButtonToClick</button>
+    <script>
+        window.addEventListener("DOMContentLoaded", function(e){
+            console.log("dom content loaded");
+            console.log(e);
+        });
+        let button = document.querySelector("#clickMe");
+        button.addEventListener("click",function(e){
+            console.log("button clicked");
+            console.log(e);
+        });
+        window.addEventListener("orientationchange",function (e){
+        let screen = window.screen;
+        let angle = screen.orientation.angle;
+        let orientation = screen.orientation.type;
+        console.log(` angle: ${angle} and orientation = ${orientation}`);
+        console.log(e);
+        });
+    </script>
+</body>
+</html>
